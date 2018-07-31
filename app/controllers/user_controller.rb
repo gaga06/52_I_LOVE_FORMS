@@ -1,22 +1,21 @@
+#encoding: utf-8
 class UserController < ApplicationController
 
   def new
+    #on déclare le User.new uniquement pour la methode form_for
     @user = User.new
   end
 
   def create
-
-
-   @user = User.new
-
+    @user = User.new
     @user.username = params["user"]["username"]
     @user.email = params["user"]["email"]
     @user.bio = params["user"]["bio"]
     @user.save
     if @user.username.include?(" ")
-      redirect_to "/user/error"
+      redirect_to error_path('user/error')
     else
-      redirect_to "/"
+      redirect_to home_path('/')
     end
   end
 
