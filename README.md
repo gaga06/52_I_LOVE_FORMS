@@ -1,4 +1,5 @@
 # I LOVE FORMS
+
 > Par Gaëlle Gorgori (06 62 31 97 81)
 
 ## Consignes de l'exercice
@@ -14,6 +15,7 @@ Je vous invite à consulter le site sur Heroku sur le lien suivant: <a href="htt
 ```
 $cd i-love-forms
 $bundle install
+$rails db:migrate
 $rails server
 ```
 
