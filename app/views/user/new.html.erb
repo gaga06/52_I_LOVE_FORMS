@@ -1,0 +1,78 @@
+<html>
+  <body>
+
+<div class = container text-align = "center">
+  <br>
+  <br>
+<h1>          ❤️  💛  💚 💙 Bienvenue à toi mon ami(e)  ❤️  💛  💚 💙   </h1>
+💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️💙💚💛❤️
+<br><br>
+
+<h2>           Pour t'inscrire, merci de bien vouloir compléter le formulaire ci-dessous:</h2> <br>
+
+<br>
+<!--#####   FORMULAIRE FORM_FOR PIMPE -->
+ <%= form_for :user do |f| %>
+
+ 💃 Ton petit nom : <br />
+  <%= f.text_field :username, class: "form-control", placeholder: "✏️Ton petit nom" %><br />
+
+  <br />
+
+  💃 Ton email     : <br />
+  <%= f.text_field :email, class: "form-control", placeholder: "✏️mon_email@domaine.com"%><br />
+
+  <br />
+
+  💃 Quelques mots sur toi : <br />
+  <%= f.text_area :bio, class: "form-control", placeholder: "✏️quelques mots sur toi"%><br />
+
+  <br />
+  <%= f.submit "Enregistrer" %>
+<% end %>
+
+</div>
+</body>
+</html>
+
+<!--
+######## FORMULAIRE CLASSIQUE HTML
+<form action="/user/new" method= "post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  Ton nom d'utilisateur:<br>
+  <input type="text" name="username"><br><br>
+  Ton email:<br>
+  <input type="text" name="email"><br><br>
+   Dis nous-en un peu plus sur toi:<br>
+  <textarea name="bio" rows="15" cols="90"></textarea><br><br>
+  <input type="submit" value="Sauvegarder"><br>
+</form>
+
+
+######## FORMULAIRE FORM_TAG
+<%= form_tag  url_for(action: 'new'),method: 'post' do  %>
+  <%= label_tag 'username', 'Ton petit nom:' %><br />
+  <%= text_field_tag 'username'%><br /><br /><br />
+<%= label_tag 'email', 'Ton email:' %><br />
+  <%= text_field_tag 'email'%><br /><br /><br />
+<%= label_tag 'bio', 'Quelques mots sur toi:' %><br />
+  <%= text_area_tag 'bio'%>
+  <br /> <br />
+<%= submit_tag "Sauvegarder" %>
+<% end %>
+
+#####   FORMULAIRE FORM_FOR CLASSIQUE
+<%= form_for :user do |f| %>
+ <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  Ton petit nom : <br />
+  <%= f.text_field :username %><br /><br />
+  Ton email     :      <br />
+  <%= f.text_field :email %><br /><br />
+  Quelques mots sur toi : <br />
+  <%= f.text_area :bio %><br /><br />
+
+  <%= f.submit "Enregistrer" %>
+<% end %>
+-->
+
+
