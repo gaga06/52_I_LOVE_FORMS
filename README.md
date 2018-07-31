@@ -12,9 +12,9 @@ Je vous invite à consulter le site sur Heroku sur le lien suivant: <a href="htt
 
 * Pour commencer la lecture :
 ```
-cd i-love-forms
-bundle install
-rails server
+$cd i-love-forms
+$bundle install
+$rails server
 ```
 
 * Les répertoires utilisés sont les suivants:
